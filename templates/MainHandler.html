@@ -1,0 +1,96 @@
+
+	
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="icon" type="image/png" href="path-tracker-small.png">
+<script src="css/jquery-latest.js" type="text/javascript" charset="utf-8"></script>
+<script src="css/jquery-ui-latest.js" type="text/javascript" charset="utf-8"></script>
+<script src="css/json2.js" type="text/javascript" charset="utf-8"></script>
+<script src="css/jquery.sparkline.js" type="text/javascript" charset="utf-8"></script>
+<script src="css/processing.js"></script>
+
+
+</head>
+
+<body>
+
+<div id="title" style="padding:2em;">
+YetAnotherIChing
+</div>
+
+
+
+<div  >
+<canvas id="draggable"  >
+
+	
+</canvas>
+</div>
+
+
+
+
+
+<p style="padding: 2em;">
+	CLICK ABOVE
+	</p>
+
+	<div id="reading"  style="padding:0.2em;}">
+	<p id="inject_me"><p>
+	</div>	
+
+
+
+
+
+
+
+
+<script>
+// $(function() { 
+// 	$("canvas#test3").load("css/proc_test.pde");
+// 	var canvas=$('canvas#test3').get(0);
+// 	var sketch=$.ajax({url: "css/proc_test.pde", async: false}).responseText
+// 	Processing(canvas,sketch);
+// });
+$(function() { 
+	var canvas=$('canvas#draggable').get(0);
+	var sketch=$.ajax({url: "css/proc_test_3.pde", async: false}).responseText;
+	Processing(canvas,sketch);
+});
+// $(function() { 
+// 	var canvas=$('canvas#test2').get(0);
+// 	var sketch=$.ajax({url: "css/proc_test_2.pde", async: false}).responseText
+// 	Processing(canvas,sketch);
+// });
+
+
+
+
+</script>
+
+<style type="text/css">
+	#draggable { width: 640px; height: 480px; padding: 2em;  position:relative;
+		 border-style:solid;
+		border-width:1px;
+	 left:60px;}
+	</style>
+	
+	<style type="text/css">
+		#action{ width: 640px; height: 480px; padding: 2em; border-style:solid;
+		border-width:5px; }
+		</style>
+		
+		
+	<!-- <script type="text/javascript">
+	$(function() {
+		$("#draggable").draggable();
+	}); -->
+
+	
+	</script>
+
+
+
+										

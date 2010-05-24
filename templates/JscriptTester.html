@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>jscript-tester</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="carlo bifulco">
+	<!-- Date: 2009-07-25 -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="icon" type="image/png" href="path-tracker-small.png">
+	<link rel="stylesheet" type="text/css" href="css/tabs.css" >
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" >
+	<script src="css/jquery-latest.js" type="text/javascript" charset="utf-8"></script>
+	<script src="css/jquery.tablesorter.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="css/jquery.tools.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="css/jquery-ui-latest.js" type="text/javascript" charset="utf-8"></script>
+	<script src="css/jquery.sparkline.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="css/processing.js"></script>
+
+</head>
+	<body>
+${test}
+
+<!-- Canvas Element -->
+
+<canvas id="canvas" width="250" height="250"></canvas>
+
+<!-- Your Code -->
+
+<script id="sketch">
+
+
+FloatTable data; 
+float dataMin, dataMax;
+float plotX1, plotY1; 
+float plotX2, plotY2;
+int yearMin, yearMax; 
+int[] years;
+
+void setup() {
+  frameRate(20);
+  strokeWeight(9);
+mapImage = loadImage("ppmc.png");
+smooth( );
+size(720, 405);
+
+fontA = loadFont("Arial");  
+textFont(fontA, 32);
+
+}
+
+void draw() {
+
+ image(mapImage, 0, 0);
+fill(0);  
+text("YARGHARGHHH", 400, 300);
+text(" position is "+mouseX+" "+mouseY, mouseX, mouseY);
+if(keyPressed) {
+text(" you pressed "+key,600,300);}
+
+  stroke(133,156,255);
+line(150, 25, 270, 350);
+line(0, 0, 350, 350);
+fill(192, 0, 0);
+noStroke( );
+ellipse(50,50,mouseX, mouseY);
+ellipse(350,350,mouseX,mouseY);
+  line(random(width),random(height),random(width),random(height));
+}
+
+void mousePressed() { background(192, 64, 0);}
+</script>
+
+
+
+<img src="ppmc.png" alt="sdsdsdsd">Test </img>
+<!-- Sketch Initializer -->
+
+<script>(function(){var init=function(){var canvas=document.getElementById("canvas");var sketch=document.getElementById("sketch").text;Processing(canvas,sketch);}
+addEventListener("DOMContentLoaded", init, false);})();</script>
+
+
+</body>
+</html>
